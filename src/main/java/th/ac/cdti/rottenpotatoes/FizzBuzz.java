@@ -1,15 +1,16 @@
 package th.ac.cdti.rottenpotatoes;
 
-public class FizzBuzz {public static String of(int n) {
-    if (n % 15 == 0) {
-        return "FizzBuzz"; // ตรวจ 15 กอน 3 และ 5
+public class FizzBuzz {
+    public static String of(int number) {
+        if (number % 15 == 0) {
+            return "FizzBuzz";
+        }
+        if (number % 3 == 0) {
+            return "Fizz";
+        }
+        if (number % 5 == 0) {
+            return "Buzz";
+        }
+        return String.valueOf(number);
     }
-    if (n % 3 == 0) {
-        return "Fizz";
-    }
-    if (n % 5 == 0) {
-        return "Buzz";
-    }
-    return Integer.toString(n);
-}
 }
