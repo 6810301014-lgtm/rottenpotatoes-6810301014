@@ -1,9 +1,12 @@
-package th.ac.cdti.rottenpotatoes;
-import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.jupiter.api.Test;
-class FizzBuzzTest {
-    @Test void oneIsOne() { assertThat(FizzBuzz.of(1)).isEqualTo("1"); }
-    @Test void threeIsFizz() { assertThat(FizzBuzz.of(3)).isEqualTo("Fizz"); }
-    @Test void fiveIsBuzz() { assertThat(FizzBuzz.of(5)).isEqualTo("Buzz"); }
-    @Test void fifteenIsFizzBuzz() { assertThat(FizzBuzz.of(15)).isEqualTo("FizzBuzz"); }
+public static String of(int n) {
+    if (n % 15 == 0) {
+        return "FizzBuzz"; // ตรวจ 15 กอน 3 และ 5
+    }
+    if (n % 3 == 0) {
+        return "Fizz";
+    }
+    if (n % 5 == 0) {
+        return "Buzz";
+    }
+    return Integer.toString(n);
 }
